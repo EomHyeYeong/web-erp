@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <!-- 두 수를 입력받는 UI(폼) -->
+  <!-- http://localhost:8081/web-erp/calc -->
+  <!-- or action="calc"-->
+  <!-- method post -> 파라미터가 url에 보이지 않음. default: get-->
+  <form action="/web-erp/calc" method="post">
+    <input type="text" name="su1"/>
+      ~
+    <input type="text" name="su2"/>
+    <input type="submit" value="전송"/>
+  </form>
+  <a href="/web-erp/calc?su1=50&su2=500">두수의 합</a><br/>
+  <a href="/web-erp/calc?su1=50&su2=300">두수의 합2</a>
+
+</body>
+</html>
