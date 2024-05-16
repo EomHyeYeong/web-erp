@@ -15,6 +15,15 @@ dependencies {
     // JSTL API
     // https://mvnrepository.com/artifact/javax.servlet/jstl                tag 기반으로 jsp 작성할 수 있음
     implementation 'javax.servlet:jstl:1.2'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    // JDBC Driver API
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation 'mysql:mysql-connector-java:8.0.28'
+    // MyBatis API
+    // https://mvnrepository.com/artifact/org.mybatis/mybatis
+    implementation 'org.mybatis:mybatis:3.5.6'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

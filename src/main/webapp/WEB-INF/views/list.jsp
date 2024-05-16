@@ -22,7 +22,30 @@
     <div class="card">
         <div class="card-header">Header</div>
         <div class="card-body">
-            컨텐츠가 들어가는 부분
+            <h5>책 리스트 보기</h5>
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>가격</th>
+                    <th>저자</th>
+                    <th>페이지</th>
+                </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="book" items="${list}">
+                    <tr>
+                        <td>${book.num}</td>    <%-- ==book.getNum() --%>
+                        <td>${book.title}</td>
+                        <td>${book.price}</td>
+                        <td>${book.author}</td>
+                        <td>${book.page}</td>
+                    </tr>
+                </c:forEach>
+                </tbody>
+            </table>
+            <button class="btn btn-sm btn-primary">등록</button>
         </div>
         <div class="card-footer">패스트캠퍼스 부트캠프 8기 엄혜영</div>
     </div>
