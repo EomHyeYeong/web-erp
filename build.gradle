@@ -12,6 +12,9 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api   web용 api, tomcat에 포함되어 있음 (-> compileOnly)
     compileOnly 'javax.servlet:javax.servlet-api:4.0.1'                     // CompileOnly: 배포 파일에 포함x
+    // JSTL API
+    // https://mvnrepository.com/artifact/javax.servlet/jstl                tag 기반으로 jsp 작성할 수 있음
+    implementation 'javax.servlet:jstl:1.2'
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
