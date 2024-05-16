@@ -22,30 +22,26 @@
     <div class="card">
         <div class="card-header">Header</div>
         <div class="card-body">
-            <h5>책 리스트 보기</h5>
-            <table class="table table-bordered table-hover">
-                <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>가격</th>
-                    <th>저자</th>
-                    <th>페이지</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="book" items="${list}">
-                    <tr>
-                        <td>${book.num}</td>    <%-- ==book.getNum() --%>
-                        <td>${book.title}</td>
-                        <td>${book.price}</td>
-                        <td>${book.author}</td>
-                        <td>${book.page}</td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-            <button class="btn btn-sm btn-primary" onclick="location.href='${cpath}/registerUI'">등록</button>
+            <form action="${cpath}/register" method="post">
+                <div class="form-group">
+                    <label for="title">제목:</label>
+                    <input type="text" class="form-control" placeholder="Enter title" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="price">가격:</label>
+                    <input type="number" class="form-control" placeholder="Enter price" id="price" name="price">
+                </div>
+                <div class="form-group">
+                    <label for="author">저자:</label>
+                    <input type="text" class="form-control" placeholder="Enter author" id="author" name="authpr">
+                </div>
+                <div class="form-group">
+                    <label for="page">페이지:</label>
+                    <input type="number" class="form-control" placeholder="Enter page" id="page" name="page">
+                </div>
+                <button type="submit" class="btn btn-primary">등록</button>
+                <button type="reset" class="btn btn-primary">취소</button>
+            </form>
         </div>
         <div class="card-footer">패스트캠퍼스 부트캠프 8기 엄혜영</div>
     </div>

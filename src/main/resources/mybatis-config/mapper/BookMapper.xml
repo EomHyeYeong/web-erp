@@ -8,4 +8,9 @@
     <select id="bookList" resultType="entity.Book">
         select * from book
     </select>
+
+    <insert id="booRegister" parameterType="entity.Book">
+        insesrt into book(title, price, author, page)
+        values(#{title}, #{price}, #{author}, #{page}) <!-- #{}: sql 파라미터 -->
+    </insert>
 </mapper>
