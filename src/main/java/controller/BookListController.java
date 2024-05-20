@@ -35,7 +35,8 @@ public class BookListController extends HttpServlet {
 
         // view(jsp)와 연동하기 (= forward, dispatcher)
         // 요청 의뢰 객체(RequestDispatcher)를 얻어오는 방법
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/list.jsp"); // s: 요청을 의뢰할 대상
+        // 뷰의 논리적인 이름(list)을 뷰의 물리적인 경로(/WEB-INF/views/list.jsp)로 변경해주는 객체: ViewResolver (spring에서는 제공해 줌)
+        RequestDispatcher rd = req.getRequestDispatcher(ViewResolver.makeView("list")); // s: 요청을 의뢰할 대상 (list: /WEB-INF/views/list.jsp)
         rd.forward(req, resp);  // client의 요청을 처리하기 위해 jsp에 req와 resp를 그대로 넘겨줘야 한다.
     }
 }

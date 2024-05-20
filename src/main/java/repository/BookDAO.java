@@ -26,7 +26,8 @@ public class BookDAO {
         }
     }
 
-    // CRUD Method
+    // CRUD Method --------------
+    // Read
     public List<Book> bookList() {
         // SqlSession을 꺼내오기
         SqlSession session = sqlSessionFactory.openSession();
@@ -37,6 +38,7 @@ public class BookDAO {
         return list;
     }
 
+    // Insert
     public int bookRegister(Book book) {
         SqlSession session = sqlSessionFactory.openSession();
         int cnt = session.insert("bookRegister", book); // insert return type: int, 성공여부 반환

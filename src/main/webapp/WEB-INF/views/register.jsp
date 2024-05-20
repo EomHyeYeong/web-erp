@@ -29,17 +29,17 @@
                 </div>
                 <div class="form-group">
                     <label for="price">가격:</label>
-                    <input type="number" class="form-control" placeholder="Enter price" id="price" name="price">
+                    <input type="text" class="form-control" placeholder="Enter price" id="price" name="price">
                 </div>
                 <div class="form-group">
                     <label for="author">저자:</label>
-                    <input type="text" class="form-control" placeholder="Enter author" id="author" name="authpr">
+                    <input type="text" class="form-control" placeholder="Enter author" id="author" name="author">
                 </div>
                 <div class="form-group">
                     <label for="page">페이지:</label>
-                    <input type="number" class="form-control" placeholder="Enter page" id="page" name="page">
+                    <input type="text" class="form-control" placeholder="Enter page" id="page" name="page">
                 </div>
-                <button type="submit" class="btn btn-primary">등록</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='${cpath}/register'">등록</button>
                 <button type="reset" class="btn btn-primary">취소</button>
             </form>
         </div>

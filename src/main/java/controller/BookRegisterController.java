@@ -31,8 +31,12 @@ public class BookRegisterController extends HttpServlet {
         BookDAO dao = new BookDAO();
         int cnt = dao.bookRegister(dto);
 
-        // 성공: 다시 리스트 페이지로 가기
-        // 실패: 예외 발생
+        // 성공: 다시 리스트 페이지로 가기 (redirect)
+        if(cnt>0) {
+            resp.sendRedirect("/web-erp/bookList");
+        } else { // 실패: 예외 발생
+            throw new ServletException("error");
+        }
 
     }
 }
