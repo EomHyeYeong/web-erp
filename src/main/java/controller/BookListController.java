@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/bookList")
+//@WebServlet("/bookList")
 public class BookListController extends HttpServlet {
     // GET  : doGet()   >> @GetMapping()
     // POST : doPost()  >> @PostMapping()
